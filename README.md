@@ -5,7 +5,7 @@ This project builds a **Long Short-Term Memory (LSTM)** neural network to predic
 
 - The model predicts the **next day's high price** based on the past **52 days of stock performance**.
 - 3 models were trained using different **optimizers** (`Adam`, `SGD`, and `RMSProp`) to determine the best-performing model.
-- This project was done as part of a machine learning module (ENG335) in my minor coursework.
+- This project was first completed as part of a machine learning module (ENG335) in my minor coursework. Changes were made for reproducibility and clearer analysis.
 
 ### 🗂️ Dataset Used
 - **Ticker Symbol**: `SIA1.SG`
