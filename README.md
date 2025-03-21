@@ -74,3 +74,12 @@ Or if you prefer the **Classic Jupyter Notebook**, follow the instructions at ht
 ```powershell
 deactivate
 ```
+
+---
+
+## ⭐ Let's Connect!
+Thanks for checking out this project!  
+If you have any questions, feedback, or collaboration opportunities, feel free to reach out!  
+
+🔗 **LinkedIn:** https://www.linkedin.com/in/dorcasshee/  
+📧 **Email:** dorcasshee@outlook.com
