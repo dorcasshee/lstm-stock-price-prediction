@@ -29,17 +29,10 @@ This project builds a **Long Short-Term Memory (LSTM)** neural network to predic
 ### 📌 Objective
 This project evaluates 3 different optimizers (`Adam`, `SGD`, `RMSProp`) to identify the most effective one for **predicting SIA stock prices**.
 
-### 🌟 Best Model: LSTM with RMSProp Optimizer (Model 3)
-| **Model** | **Optimizer** | **MSE** | **MAE** | **MAPE** | **R² Score** |  
-|-----------|--------------|---------|---------|----------|------------|  
-| **Model 1** | Adam | 0.00139 | 0.02801 | 0.00940 | 0.87701 |  
-| **Model 2** | SGD | 0.00337 | 0.04675 | 0.01566 | 0.70255 |  
-| **Model 3 (Best Model)** | RMSProp | 0.00130 | 0.02645 | 0.00855 | 0.88525 | 
-
-- **Model 3 (RMSProp)** performed the best, achieving the **lowest MSE, MAE, and MAPE**, with the **highest R² Score (0.88525)**.
-- **Model 1 (Adam) was a close second**, making it a viable alternative.
-- SGD performed the worst, with higher error values and a **noticeable time lag**, where predicted stock prices reacted **slower than actual market trends**.
-- Note that depending on the random seed, the model performance could change, and another optimizer could become more appropriate. E.g., `Adam`.
+### 🌟 Best Model: LSTM with `Adam` Optimizer (Model 1)
+- **Adam** was the best optimizer, achieving the **lowest MSE, MAE, and MAPE** and **highest R² Score at 0.88525**.
+- **SGD** had higher error values in general, and there is an obvious time lag in its price predictions. Predicted stock prices reacted **slower than actual market trends**.
+- **RMSProp** had similar error values to **Adam**, but tended to overestimate stock prices, making it unreliable for precise stock price prediction.
 
 ### 📈 Visualisation of Predicted Stock Prices vs Actual Stock Prices  
 ![predicted-vs-actual-prices](imgs/model-results.png)
@@ -88,6 +81,17 @@ Deactivate the virtual environment if you do not need to use it anymore.
 ```powershell
 deactivate
 ```
+
+---
+
+## ⭐ Future Improvements
+- **Evaluate models across different industries and time periods**
+  - Test models on stocks from various sectors to assess their adaptability to different market conditions.
+  - E.g., Tech, FMCG, energy.
+- **Deploy model as web application**
+  - Integrate best-performing model into a Flask API and containerise it with Docker
+  - A web-based interface can be developed to allow business users to input ticker symbols and forecast prices for a speciied period.
+  - This is similar to my other project on [predicting customer churn](https://github.com/dorcasshee/customer-churn-prediction).
 
 ---
 
