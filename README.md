@@ -47,7 +47,7 @@ This project evaluates 3 different optimizers (`Adam`, `SGD`, `RMSProp`) to iden
 ## ⭐ How to Run  
 ### 1. Clone this repository:
 ```bash
-git clone https://github.com/dorcasshee/lstm-stock-prediction.git
+git clone https://github.com/dorcasshee/lstm-stock-price-prediction.git
 cd lstm-stock-prediction
 ```
 
