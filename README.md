@@ -13,7 +13,8 @@ This project builds a **Long Short-Term Memory (LSTM)** neural network to predic
 - **Testing** Dataset: **2022 stock price data**.
 
 ### 📘 Libraries Used
-`keras`, `tensorflow`, `pandas`, `numpy`, `matplotlib`, `seaborn`
+- `keras`, `tensorflow`, `pandas`, `numpy`, `matplotlib`, `seaborn`
+- Random `seed` set to **42** for reproducibility.
 
 ---
 
@@ -38,6 +39,7 @@ This project evaluates 3 different optimizers (`Adam`, `SGD`, `RMSProp`) to iden
 - **Model 3 (RMSProp)** performed the best, achieving the **lowest MSE, MAE, and MAPE**, with the **highest R² Score (0.88525)**.
 - **Model 1 (Adam) was a close second**, making it a viable alternative.
 - SGD performed the worst, with higher error values and a **noticeable time lag**, where predicted stock prices reacted **slower than actual market trends**.
+- Note that depending on the random seed, the model performance could change, and another optimizer could become more appropriate. E.g., `Adam`.
 
 ### 📈 Visualisation of Predicted Stock Prices vs Actual Stock Prices  
 ![predicted-vs-actual-prices](imgs/model-results.png)
@@ -51,26 +53,38 @@ git clone https://github.com/dorcasshee/lstm-stock-price-prediction.git
 cd lstm-stock-price-prediction
 ```
 
-### 2. [*Optional*] Create a virtual environment
+### 2. [Optional] Create a virtual environment
 You may want to use a virtual environment for dependency management. You can run the following commands to create and activate a new virtual environment:
 ```powershell
 python -m venv [venvName] # only run once
 [venvName]\Scripts\activate # windows
 ```
+Replace `[venvName]` with your desired virtual environment name. E.g., `lstm-env`.
 
-### 3. Install dependencies:  
+### 3. [Recommended] Upgrade `pip`
 ```powershell
-pip install -r requirements.txt
+python -m pip install --upgrade pip
 ```
 
-### 3. Run `lstm-stock-price-prediction.ipynb` using Jupyter Notebook
-Go to Anaconda Prompt and run:
+### 4. Install dependencies:  
+```powershell
+pip install -r requirements.txt
+pip install notebook ipykernel
+```
+
+### 5. Install `ipykernel` as `[venvName]`
+```powershell
+python -m ipykernel install --user --name=[venvName] --display-name "Python ([venvName])”
+```
+
+### 6. Run `lstm-stock-price-prediction.ipynb` using Jupyter Notebook
 ```powershell
 jupyter notebook
 ```
-Or if you prefer the **Classic Jupyter Notebook**, follow the instructions at https://github.com/jupyter/nbclassic.
+Alternatively, you can run the IPYNB file in **Visual Studio Code** if you have the Jupyter extension. Ensure that the kernel is set to `Python ([venvName])`.
 
-### 4. [*Optional*] Deactivate the virtual environment
+### 7. [Optional] Deactivate the virtual environment
+Deactivate the virtual environment if you do not need to use it anymore.
 ```powershell
 deactivate
 ```
